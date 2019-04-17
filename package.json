@@ -1,7 +1,7 @@
 {
   "name": "qunit-ava-spec",
   "description": "Helper functions for using QUnit as if it was ava/ava-spec.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
