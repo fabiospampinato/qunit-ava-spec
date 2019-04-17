@@ -77,6 +77,14 @@ t.pass = function () {
 
 /* EXPORT */
 
-window['describe'] = describe;
-window['it'] = test;
-window['test'] = test;
+if ( typeof window !== 'undefined' ) {
+  window['describe'] = describe;
+  window['it'] = test;
+  window['test'] = test;
+}
+
+if ( typeof global !== 'undefined' ) {
+  global['describe'] = describe;
+  global['it'] = test;
+  global['test'] = test;
+}
