@@ -28,8 +28,8 @@
     "ava",
     "ava-spec"
   ],
-  "dependencies": {},
   "devDependencies": {
+    "@types/node": "^17.0.18",
     "@types/qunit": "^2.5.4",
     "rimraf": "^2.6.0",
     "typescript": "^3.0.3",
