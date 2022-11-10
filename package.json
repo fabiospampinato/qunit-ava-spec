@@ -1,26 +1,17 @@
 {
   "name": "qunit-ava-spec",
+  "repository": "github:fabiospampinato/qunit-ava-spec",
   "description": "Helper functions for using QUnit as if it was ava/ava-spec.",
   "version": "1.1.1",
+  "type": "module",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "clean": "rimraf dist",
-    "compile": "tsc --skipLibCheck && tstei",
-    "compile:watch": "tsc --skipLibCheck --watch",
+    "clean": "tsex clean",
+    "compile": "tsex compile",
+    "compile:watch": "tsex compile --watch",
     "prepublishOnly": "npm run clean && npm run compile"
-  },
-  "bugs": {
-    "url": "https://github.com/fabiospampinato/qunit-ava-spec/issues"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Fabio Spampinato",
-    "email": "spampinabio@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fabiospampinato/qunit-ava-spec.git"
   },
   "keywords": [
     "qunit",
@@ -29,10 +20,8 @@
     "ava-spec"
   ],
   "devDependencies": {
-    "@types/node": "^17.0.18",
-    "@types/qunit": "^2.5.4",
-    "rimraf": "^2.6.0",
-    "typescript": "^3.0.3",
-    "typescript-transform-export-interop": "^1.0.0"
+    "@types/qunit": "^2.19.3",
+    "tsex": "^1.1.2",
+    "typescript": "^4.8.4"
   }
 }

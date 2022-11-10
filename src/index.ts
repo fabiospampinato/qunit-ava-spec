@@ -1,7 +1,7 @@
 
 /* DESCRIBE */
 
-function describe ( name, hooks, tests ) {
+const describe = ( name, hooks, tests ) => {
 
   if ( typeof hooks === 'function' ) {
 
@@ -10,45 +10,45 @@ function describe ( name, hooks, tests ) {
 
   } else if ( !tests ) {
 
-    tests = function () {};
+    tests = () => {};
 
   }
 
-  QUnit.module ( name, hooks, function () {
+  QUnit.module ( name, hooks, () => {
 
     tests ( test );
 
   });
 
-}
+};
 
 /* TEST */
 
-function test ( name, callback, _method ) {
+const test = ( name, callback, _method ) => {
 
-  var method = _method || 'test';
+  const method = _method || 'test';
 
-  QUnit[method]( name, function () {
+  QUnit[method]( name, () => {
 
     callback ( t );
 
   });
 
-}
+};
 
-test.only = function ( name, callback ) {
+test.only = ( name, callback ) => {
 
   test ( name, callback, 'only' );
 
 };
 
-test.skip = function ( name, callback ) {
+test.skip = ( name, callback ) => {
 
   test ( name, callback, 'skip' );
 
 };
 
-test.todo = function ( name, callback ) {
+test.todo = ( name, callback ) => {
 
   test ( name, callback, 'todo' );
 
@@ -57,34 +57,33 @@ test.todo = function ( name, callback ) {
 /* T */
 
 const t = QUnit.assert as any;
+
 t.is = t.strictEqual;
+
 t.not = t.notStrictEqual;
-t.true = function ( val ) {
-  t.is ( val, true );
+
+t.true = value => {
+  t.is ( value, true );
 };
-t.false = function ( val ) {
-  t.is ( val, false );
+
+t.false = value => {
+  t.is ( value, false );
 };
-t.truthy = function ( val ) {
-  t.true ( !!val );
+
+t.truthy = value => {
+  t.true ( !!value );
 };
-t.falsy = function ( val ) {
-  t.false ( !!val );
+
+t.falsy = value => {
+  t.false ( !!value );
 };
-t.pass = function () {
+
+t.pass = () => {
   t.true ( true );
 };
 
 /* EXPORT */
 
-if ( typeof window !== 'undefined' ) {
-  window['describe'] = describe;
-  window['it'] = test;
-  window['test'] = test;
-}
-
-if ( typeof global !== 'undefined' ) {
-  global['describe'] = describe;
-  global['it'] = test;
-  global['test'] = test;
-}
+window['describe'] = describe;
+window['it'] = test;
+window['test'] = test;
