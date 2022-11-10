@@ -2,7 +2,7 @@
   "name": "qunit-ava-spec",
   "repository": "github:fabiospampinato/qunit-ava-spec",
   "description": "Helper functions for using QUnit as if it was ava/ava-spec.",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
