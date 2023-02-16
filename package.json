@@ -11,7 +11,7 @@
     "clean": "tsex clean",
     "compile": "tsex compile",
     "compile:watch": "tsex compile --watch",
-    "prepublishOnly": "npm run clean && npm run compile"
+    "prepublishOnly": "tsex prepare"
   },
   "keywords": [
     "qunit",
@@ -20,8 +20,8 @@
     "ava-spec"
   ],
   "devDependencies": {
-    "@types/qunit": "^2.19.3",
-    "tsex": "^1.1.2",
-    "typescript": "^4.8.4"
+    "@types/qunit": "^2.19.4",
+    "tsex": "^2.2.0",
+    "typescript": "^4.9.5"
   }
 }
