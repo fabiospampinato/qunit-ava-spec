@@ -20,8 +20,8 @@
     "ava-spec"
   ],
   "devDependencies": {
-    "@types/qunit": "^2.19.4",
-    "tsex": "^2.2.0",
-    "typescript": "^4.9.5"
+    "@types/qunit": "^2.19.6",
+    "tsex": "^3.0.1",
+    "typescript": "^5.1.6"
   }
 }
